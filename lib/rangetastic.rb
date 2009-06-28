@@ -17,11 +17,3 @@ end
 ActiveRecord::Base.class_eval do
   include Rangetastic
 end
-
-
-# @@valid_fields = %w(referred_on commenced_on created_at updated_at)
-# 
-# named_scope :between, lambda{ |start_date, end_date, field_name|
-#   field = (@@valid_fields.include?(field_name)) ? (field_name) : raise(ActiveRecord::StatementInvalid)
-#   {  :conditions => ["#{field} >= ? AND #{field} <= ?",  start_date, end_date]}
-# }
