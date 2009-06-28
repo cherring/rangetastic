@@ -26,15 +26,15 @@ class TestHelper
     }
     
     10.times do
-      Order.create(:ordered_on => 2.weeks.ago)
+      Order.create(:ordered_on => 2.weeks.ago, :fulfilled_on => 2.days.ago)
     end
 
     10.times do
-      Order.create(:ordered_on => 3.weeks.ago)
+      Order.create(:ordered_on => 3.weeks.ago, :fulfilled_on => 2.days.ago)
     end
     
     5.times do
-      Order.create(:ordered_on => 1.weeks.ago)
+      Order.create(:ordered_on => 1.weeks.ago, :fulfilled_on => 2.days.ago)
     end
       
   end
