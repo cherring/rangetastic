@@ -1,0 +1,10 @@
+lib/rangetastic.rb
+MIT-License
+Rakefile
+README.markdown
+spec/fixtures/models.rb
+spec/fixtures/structure.sql
+spec/rangetastic_spec.rb
+spec/spec_helper.rb
+spec/test_helper.rb
+Manifest
