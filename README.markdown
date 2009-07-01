@@ -11,7 +11,7 @@ To acheive this you need to install rangetastic
     
 Then inside your environment.rb
 
-    config.gem "cherring-rangetastic", :source => "http://gems.github.com"
+    config.gem "cherring-rangetastic", :lib => "rangetastic", :source => "http://gems.github.com"
     
 Then in your model pass in the fields you wish to allow to be searchable using the between filter
 
