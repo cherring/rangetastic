@@ -26,4 +26,7 @@ describe Order do
     end
   end
   
+  it "should have 5 orders fulfilled that were ordered no more than 10 days ago" do
+    Order.fulfilled.ordered_between(10.days.ago, 1.day.ago).size.should == 5
+  end
 end
