@@ -31,4 +31,4 @@ But if that field isn't on the Model or isn't an _on field then it will raise th
 
 And if you (or someone nasty!) try to use a field that is not whitelisted, it will raise ActiveRecord::StatementInvalid
 
-Thanks to spraints for some inspiration.
+Thanks to [spraints](http://github.com/spraints) for some inspiration.
