@@ -28,7 +28,7 @@ module Rangetastic
       
       def make_scope(scope, field, *args)
         named_scope scope, lambda{ |start_date, end_date|
-          { :conditions => ["#{field} >= ? AND #{field} <= ?", start_date, end_date] }
+          { :conditions => ["#{field} BETWEEN ? AND ?", start_date, end_date] }
         }
         call_scope(scope, *args)
       end
