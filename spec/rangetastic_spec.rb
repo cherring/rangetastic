@@ -26,7 +26,11 @@ describe Order do
     end
   end
   
-  it "should have 5 orders fulfilled that were ordered no more than 10 days ago" do
+  it "should have 5 orders fulfilled that were ordered no more than 10 days ago - 3" do
     Order.fulfilled.ordered_between(10.days.ago, 1.day.ago).size.should == 5
+  end
+  
+  it "should raise no method error when a field doesn't exist" do
+    lambda{ Order.eaten_between(1.day.ago, Date.today) }.should raise_error(NoMethodError)
   end
 end
