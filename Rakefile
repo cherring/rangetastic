@@ -2,7 +2,7 @@ require 'rubygems'
 require 'rake'
 require 'echoe'
 
-Echoe.new('rangetastic', '0.1.3') do |p|
+Echoe.new('rangetastic', '0.2.0') do |p|
   p.description     = "Chain a date range to any named_scope on any date field with specified white listed fields"
   p.url             = "http://github.com/cherring/rangetastic"
   p.author          = "Chris Herring"
