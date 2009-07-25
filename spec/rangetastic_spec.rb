@@ -30,7 +30,7 @@ describe Order do
     Order.fulfilled.ordered_between(10.days.ago, 1.day.ago).size.should == 5
   end
   
-  %w(ordered shipped fulfilled).each do |field|
+  %w(ordered shipped fulfilled created updated).each do |field|
     it "should be able to access #{field}_between" do
       lambda{ Order.send("#{field}_between", 1.day.ago, Date.today) }.should_not raise_error(NoMethodError)
     end

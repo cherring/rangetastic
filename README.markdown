@@ -27,7 +27,13 @@ Now you can also access this with the following syntax for any field ending with
 
     Order.fulfilled.ordered_between(1.week.ago, 10.minutes.ago)
 
-But if that field isn't on the Model or isn't an _on field then it will raise the standard NoMethodError.
+In this new version of rangetastic you can also query on _at fields. If you have an _at field such as created_at you can now
+
+    Order.fulfilled.created_between(1.week.ago, 10.minutes.ago)
+    
+However if you have an _on field and _at field the on field will take precedence over the at. If you want to access the _at field over _on field you will need to use the .between and whitelisted fields method specified first.
+
+But if your field isn't on the Model or isn't an _on or an _at field then it will raise the standard NoMethodError.
 
 And if you (or someone nasty!) try to use a field that is not whitelisted, it will raise ActiveRecord::StatementInvalid
 

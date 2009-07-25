@@ -13,7 +13,7 @@ CREATE TABLE orders (
     id integer NOT NULL default nextval('orders_id_seq'),
     ordered_on timestamp,
     fulfilled_on timestamp,
-    shipped_on timestamp,
+    shipped_at timestamp,
     created_at timestamp without time zone,
     updated_at timestamp without time zone
 );

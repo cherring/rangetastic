@@ -15,15 +15,25 @@ module Rangetastic
     
     private
       def method_missing(symbol, *args, &block)
-        if (columns_hash.has_key? field(symbol)) || @fields.has_key?(field(symbol))
-          make_scope(symbol, field(symbol), *args)
+        if (field(symbol) || @fields.include?(field_to_query))
+          make_scope(symbol, field_to_query, *args)
         else
           super
         end
       end
       
       def field(symbol)
-        "#{symbol.to_s.gsub("_between","")}_on"
+        if columns_hash.has_key? "#{symbol.to_s.gsub("_between","")}_on"
+          @field = "#{symbol.to_s.gsub("_between","")}_on"
+        elsif columns_hash.has_key? "#{symbol.to_s.gsub("_between","")}_at"
+          @field = "#{symbol.to_s.gsub("_between","")}_at"
+        else
+          @field = nil
+        end
+      end
+      
+      def field_to_query
+        @field
       end
       
       def make_scope(scope, field, *args)
