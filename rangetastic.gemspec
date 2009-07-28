@@ -2,11 +2,11 @@
 
 Gem::Specification.new do |s|
   s.name = %q{rangetastic}
-  s.version = "0.3.0"
+  s.version = "0.3.1"
 
   s.required_rubygems_version = Gem::Requirement.new(">= 1.2") if s.respond_to? :required_rubygems_version=
   s.authors = ["Chris Herring"]
-  s.date = %q{2009-07-25}
+  s.date = %q{2009-07-28}
   s.description = %q{Chain a date range to any named_scope on any date field with specified white listed fields}
   s.email = %q{chris.herring.iphone@gmail.com}
   s.extra_rdoc_files = ["lib/rangetastic.rb", "README.markdown"]

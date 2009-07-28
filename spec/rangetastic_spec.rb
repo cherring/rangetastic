@@ -21,7 +21,7 @@ describe Order do
   end
   
   it "should be able to filter on any field that is in fields => []" do
-    %w(ordered_on fulfilled_on shipped_on).each do |field|
+    %w(ordered_on fulfilled_on shipped_at).each do |field|
       lambda{ Order.fulfilled.between(1.week.ago, 1.day.ago, field) }.should_not raise_error(ActiveRecord::StatementInvalid)
     end
   end

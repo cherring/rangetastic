@@ -23,13 +23,21 @@ module Rangetastic
       end
       
       def field(symbol)
-        if columns_hash.has_key? "#{symbol.to_s.gsub("_between","")}_on"
-          @field = "#{symbol.to_s.gsub("_between","")}_on"
-        elsif columns_hash.has_key? "#{symbol.to_s.gsub("_between","")}_at"
-          @field = "#{symbol.to_s.gsub("_between","")}_at"
+        if columns_hash.has_key? on_field(symbol)
+          @field = on_field(symbol)
+        elsif columns_hash.has_key? at_field(symbol)
+          @field = at_field(symbol)
         else
           @field = nil
         end
+      end
+      
+      def at_field(symbol)
+        "#{symbol.to_s.gsub("_between","")}_at"
+      end
+      
+      def on_field(symbol)
+        "#{symbol.to_s.gsub("_between","")}_on"
       end
       
       def field_to_query
