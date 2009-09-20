@@ -2,15 +2,15 @@
 
 Gem::Specification.new do |s|
   s.name = %q{rangetastic}
-  s.version = "0.3.1"
+  s.version = "0.3.2"
 
   s.required_rubygems_version = Gem::Requirement.new(">= 1.2") if s.respond_to? :required_rubygems_version=
   s.authors = ["Chris Herring"]
-  s.date = %q{2009-07-28}
+  s.date = %q{2009-09-20}
   s.description = %q{Chain a date range to any named_scope on any date field with specified white listed fields}
   s.email = %q{chris.herring.iphone@gmail.com}
-  s.extra_rdoc_files = ["lib/rangetastic.rb", "README.markdown"]
-  s.files = ["lib/rangetastic.rb", "Manifest", "MIT-License", "Rakefile", "rangetastic.gemspec", "README.markdown", "spec/fixtures/models.rb", "spec/fixtures/structure.sql", "spec/rangetastic_spec.rb", "spec/spec_helper.rb", "spec/test_helper.rb"]
+  s.extra_rdoc_files = ["README.markdown", "lib/rangetastic.rb"]
+  s.files = ["MIT-License", "Manifest", "README.markdown", "Rakefile", "lib/rangetastic.rb", "rangetastic.gemspec", "spec/fixtures/models.rb", "spec/fixtures/structure.sql", "spec/rangetastic_spec.rb", "spec/spec_helper.rb", "spec/test_helper.rb"]
   s.homepage = %q{http://github.com/cherring/rangetastic}
   s.rdoc_options = ["--line-numbers", "--inline-source", "--title", "Rangetastic", "--main", "README.markdown"]
   s.require_paths = ["lib"]

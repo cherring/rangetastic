@@ -1,9 +1,9 @@
-lib/rangetastic.rb
-Manifest
 MIT-License
-Rakefile
-rangetastic.gemspec
+Manifest
 README.markdown
+Rakefile
+lib/rangetastic.rb
+rangetastic.gemspec
 spec/fixtures/models.rb
 spec/fixtures/structure.sql
 spec/rangetastic_spec.rb
