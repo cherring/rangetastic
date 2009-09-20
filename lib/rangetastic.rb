@@ -18,7 +18,7 @@ module Rangetastic
         if (field(symbol) || @fields.include?(field_to_query))
           make_scope(symbol, field_to_query, *args)
         else
-          super
+          super(symbol, *args)
         end
       end
       
