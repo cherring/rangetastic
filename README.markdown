@@ -5,13 +5,17 @@ Rangetastic allows you to filter results of a named_scope call on any dates usin
 Configuration & Usage
 =====================
 
-To acheive this you need to install rangetastic
+To acheive this you need to install rangetastic, but first install gemcutter and enable it for gems if you haven't already:
 
-    sudo gem install cherring-rangetastic
+    sudo gem install gemcutter
+    
+    gem tumble
+
+    sudo gem install rangetastic
     
 Then inside your environment.rb
 
-    config.gem "cherring-rangetastic", :lib => "rangetastic", :source => "http://gems.github.com"
+    config.gem "rangetastic"
     
 Then in your model pass in the fields you wish to allow to be searchable using the between filter
 
